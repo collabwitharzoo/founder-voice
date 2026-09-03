@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Syed Arzoo Karina helps founders turn LinkedIn into a channel that brings inbound. Positioning, ghostwriting in your voice, distribution and measurement.">
+<meta name="author" content="Syed Arzoo Karina">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Founder Voice — Syed Arzoo Karina">
+<meta property="og:description" content="Great companies, invisible founders. I fix that side of it: the founder's voice, published consistently, in a way that brings inbound instead of applause.">
+<meta property="og:site_name" content="Founder Voice">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Founder Voice — Syed Arzoo Karina">
+<meta name="twitter:description" content="LinkedIn and personal brand for founders.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9C%8D%EF%B8%8F</text></svg>">
+<style>
+html{color-scheme:light dark}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>Founder Voice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Karla:ital,wght@0,300..700;1,400..600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --ground:#E9EAE4;
+  --surface:#F6F6F2;
+  --surface-2:#DEE0D8;
+  --ink:#14161A;
+  --muted:#63675F;
+  --line:#C9CCC2;
+  --accent:#2438C8;
+  --accent-soft:#DCDFF8;
+  --fill-note:#F1EFD9;
+  --note-line:#B9A94A;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"Karla","Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101215;
+    --surface:#171A1E;
+    --surface-2:#20242A;
+    --ink:#ECEDE7;
+    --muted:#959A90;
+    --line:#2C3138;
+    --accent:#93A2FF;
+    --accent-soft:#1D2440;
+    --fill-note:#26240F;
+    --note-line:#7E7233;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101215;
+  --surface:#171A1E;
+  --surface-2:#20242A;
+  --ink:#ECEDE7;
+  --muted:#959A90;
+  --line:#2C3138;
+  --accent:#93A2FF;
+  --accent-soft:#1D2440;
+  --fill-note:#26240F;
+  --note-line:#7E7233;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.page{
+  max-width:940px;
+  margin:0 auto;
+  padding:clamp(28px,5vw,72px) clamp(20px,5vw,56px) 96px;
+}
+
+/* ---- rail layout ---- */
+.block{
+  display:grid;
+  grid-template-columns:112px minmax(0,1fr);
+  gap:0 32px;
+  padding:clamp(28px,4vw,46px) 0;
+  border-top:1px solid var(--line);
+}
+.rail{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  padding-top:6px;
+}
+@media (max-width:680px){
+  .block{grid-template-columns:1fr;gap:14px}
+  .rail{padding-top:0}
+}
+
+/* ---- masthead ---- */
+.mast{padding-bottom:clamp(26px,4vw,40px)}
+.who{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;
+  margin-bottom:clamp(30px,6vw,56px);
+}
+.who .name{
+  font-family:var(--mono);
+  font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink);
+}
+.who .sep{width:22px;height:1px;background:var(--line)}
+.who .what{
+  font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);
+}
+h1{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:clamp(34px,6.2vw,60px);
+  line-height:1.06;
+  letter-spacing:-.015em;
+  margin:0 0 22px;
+  text-wrap:balance;
+  max-width:16ch;
+}
+h1 em{font-style:italic;color:var(--accent)}
+.lede{
+  font-size:clamp(17px,2.1vw,20px);
+  line-height:1.55;
+  color:var(--muted);
+  max-width:52ch;
+  margin:0;
+}
+
+/* ---- metrics ---- */
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+.metric{
+  background:var(--surface);
+  padding:20px 20px 18px;
+  display:flex;flex-direction:column;gap:6px;
+}
+.metric .num{
+  font-family:var(--display);
+  font-size:clamp(28px,4vw,38px);
+  line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+.metric .cap{
+  font-family:var(--mono);
+  font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+  line-height:1.5;
+}
+.fill{
+  background:var(--fill-note);
+  border-bottom:2px dashed var(--note-line);
+  padding:0 4px;
+  font-family:var(--mono);
+  font-size:.62em;
+  letter-spacing:.06em;
+  color:var(--ink);
+}
+.metric-note{
+  font-family:var(--mono);font-size:11px;color:var(--muted);
+  margin-top:12px;line-height:1.6;
+}
+
+/* ---- prose ---- */
+h2{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:clamp(23px,3.2vw,30px);
+  line-height:1.2;
+  margin:0 0 18px;
+  letter-spacing:-.01em;
+  text-wrap:balance;
+}
+p{margin:0 0 16px;max-width:62ch}
+p:last-child{margin-bottom:0}
+strong{font-weight:600}
+
+/* ---- service list ---- */
+.svc{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.svc li{
+  padding:16px 0;
+  border-bottom:1px solid var(--line);
+  display:grid;
+  grid-template-columns:minmax(0,13.5rem) minmax(0,1fr);
+  gap:6px 28px;
+  align-items:baseline;
+}
+.svc li:first-child{padding-top:0}
+.svc li:last-child{border-bottom:0;padding-bottom:0}
+.svc .t{font-weight:600;font-size:16px;letter-spacing:-.005em}
+.svc .d{color:var(--muted);font-size:15.5px;line-height:1.55}
+@media (max-width:600px){.svc li{grid-template-columns:1fr}}
+
+/* ---- steps (a real sequence) ---- */
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:flex;flex-direction:column;gap:20px}
+.steps li{
+  counter-increment:s;
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:start;
+}
+.steps li::before{
+  content:counter(s,decimal-leading-zero);
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  color:var(--accent);
+  padding-top:5px;
+}
+.steps .t{font-weight:600;display:block;margin-bottom:2px}
+.steps .d{color:var(--muted);font-size:15.5px;line-height:1.55;display:block;max-width:56ch}
+.steps .when{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);display:block;margin-top:5px;
+}
+
+/* ---- pillars ---- */
+.pillars{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:14px;margin:0;padding:0;list-style:none;
+}
+.pillars li{
+  border-left:2px solid var(--accent);
+  padding:2px 0 4px 14px;
+}
+.pillars .t{display:block;font-weight:600;font-size:15px;margin-bottom:3px}
+.pillars .d{display:block;color:var(--muted);font-size:14.5px;line-height:1.5}
+
+/* ---- pull ---- */
+.pull{
+  font-family:var(--display);
+  font-size:clamp(20px,2.8vw,26px);
+  line-height:1.35;
+  font-style:italic;
+  color:var(--ink);
+  max-width:34ch;
+  margin:0;
+}
+.pull span{color:var(--accent);font-style:normal;font-family:var(--body);font-weight:600}
+
+/* ---- close ---- */
+.close{
+  background:var(--surface);
+  border:1px solid var(--line);
+  padding:clamp(24px,4vw,36px);
+  display:flex;flex-direction:column;gap:18px;
+}
+.close h2{margin-bottom:0}
+.contact{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:baseline}
+.contact a{
+  font-family:var(--mono);font-size:13px;letter-spacing:.02em;
+  color:var(--accent);text-decoration:none;
+  border-bottom:1px solid var(--accent-soft);
+  padding-bottom:2px;
+}
+.contact a:hover{border-bottom-color:var(--accent)}
+.contact a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* ---- footer note ---- */
+.foot{
+  margin-top:34px;
+  font-family:var(--mono);font-size:11px;line-height:1.7;color:var(--muted);
+  border-top:1px solid var(--line);padding-top:16px;
+}
+</style>
+
+</head>
+<body>
+<div class="page">
+
+  <header class="mast">
+    <div class="who">
+      <span class="name">Syed Arzoo Karina</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span class="what">Founder&rsquo;s Office, Fountane &middot; LinkedIn &amp; personal brand for founders</span>
+    </div>
+    <h1>Great companies, <em>invisible</em> founders.</h1>
+    <p class="lede">That gap is the whole problem. Your product gets explained by a landing page while the person who actually understands why it exists says nothing for months. I fix that side of it: the founder's voice, published consistently, in a way that brings inbound instead of applause.</p>
+  </header>
+
+  <section class="block">
+    <div class="rail">Track record</div>
+    <div>
+      <div class="metrics">
+        <div class="metric">
+          <span class="num">22,259</span>
+          <span class="cap">Impressions on my own profile, last 90 days</span>
+        </div>
+        <div class="metric">
+          <span class="num">+87%</span>
+          <span class="cap">Reach growth vs. the prior 90 days</span>
+        </div>
+        <div class="metric">
+          <span class="num">5,400</span>
+          <span class="cap">Followers, 500+ connections</span>
+        </div>
+        <div class="metric">
+          <span class="num">0&nbsp;&rarr;&nbsp;6</span>
+          <span class="cap">Colleagues posting after I built Fountane&rsquo;s community channel</span>
+        </div>
+      </div>
+      <p class="metric-note">Pulled from LinkedIn creator analytics, 6 Jun &ndash; 3 Sep 2026. I also write the Fountane Inc. company page, currently 13,161 followers, and I grew a Hyderabad women&rsquo;s community to 50 members in four days from a single post.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="rail">Who I am</div>
+    <div>
+      <h2>I do this every day inside a venture studio, not as a side experiment.</h2>
+      <p>I have been in the <strong>Founder&rsquo;s Office at Fountane Inc.</strong> since 2023, a venture studio building products for founders and enterprises. Community, content and brand sit with me, alongside tech hiring. Which means I write for founders while watching them build, not from the outside.</p>
+      <p>Before that, three years recruiting: sourcing, screening, selling roles to people who were not looking. Most of writing a founder&rsquo;s profile is the same job. You are convincing someone to care about something they did not come here for.</p>
+      <p>And I test everything on myself first. I post as a creator, I write the Fountane page, and I built an automated tracker that pulls every post&rsquo;s impressions and engagement into one view so I can see patterns instead of screenshots. Nothing I recommend to you is untested theory.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="rail">What I do</div>
+    <div>
+      <ul class="svc">
+        <li>
+          <span class="t">Positioning</span>
+          <span class="d">One sentence that says what you are known for, and the three arguments only you can make. Everything else is downstream of this.</span>
+        </li>
+        <li>
+          <span class="t">Ghostwriting in your voice</span>
+          <span class="d">Posts drafted from a 45-minute call a week. They sound like you talking, not like a LinkedIn post. If a reader can tell it was outsourced, I have failed.</span>
+        </li>
+        <li>
+          <span class="t">Profile as a landing page</span>
+          <span class="d">Headline, banner, About, featured section. The part every profile visit lands on and most founders wrote once in 2019.</span>
+        </li>
+        <li>
+          <span class="t">Distribution</span>
+          <span class="d">Comments, DMs, connection strategy, the founders and operators worth being visible to. Posting without this is writing into a drawer.</span>
+        </li>
+        <li>
+          <span class="t">Measurement</span>
+          <span class="d">The tracker I built for myself, set up on your profile: every post&rsquo;s reach and engagement in one view, refreshed daily. Reviewed monthly so we cut what only looked like it worked.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="rail">How it runs</div>
+    <div>
+      <h2>Four steps, then a weekly rhythm.</h2>
+      <ol class="steps">
+        <li>
+          <span class="t">Voice audit</span>
+          <span class="d">I read everything you have already published, plus a recorded conversation. I come back with how you actually sound and where the profile is leaking attention.</span>
+          <span class="when">Week 1</span>
+        </li>
+        <li>
+          <span class="t">Positioning and pillars</span>
+          <span class="d">We agree on the four themes you post inside for the next quarter, and rewrite the profile to match.</span>
+          <span class="when">Week 1&ndash;2</span>
+        </li>
+        <li>
+          <span class="t">Writing rhythm</span>
+          <span class="d">One call a week, three posts drafted, you approve or redline. Scheduled, published, commented under for the first two hours.</span>
+          <span class="when">Ongoing</span>
+        </li>
+        <li>
+          <span class="t">Review and adjust</span>
+          <span class="d">Monthly read of the tracker. What earned saves and DMs gets more room, what earned polite likes gets cut.</span>
+          <span class="when">Monthly</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="rail">The pillars</div>
+    <div>
+      <h2>Most founders post one of these and wonder why it flattens.</h2>
+      <ul class="pillars">
+        <li><span class="t">The build</span><span class="d">What you shipped, what broke, what it cost. The only content competitors cannot copy.</span></li>
+        <li><span class="t">The point of view</span><span class="d">The thing about your market you believe and most people do not. This is what gets quoted.</span></li>
+        <li><span class="t">The proof</span><span class="d">Customers, numbers, outcomes, told as a story rather than an announcement.</span></li>
+        <li><span class="t">The person</span><span class="d">Why you, why now. The pillar founders skip, and the one that makes strangers reply.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="rail">Why it matters</div>
+    <div>
+      <p class="pull">A founder's profile is the only asset that gets warmer while you sleep. <span>Yours is currently cold.</span></p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="rail">Start here</div>
+    <div class="close">
+      <h2>A 20-minute call, no deck.</h2>
+      <p>Send me your profile. I will come back with three specific things I would change and the first post I would write for you. If it is useful and you want to keep going, we talk about that then.</p>
+      <div class="contact">
+        <a href="mailto:collabwitharzoo@gmail.com">collabwitharzoo@gmail.com</a>
+        <a href="https://www.linkedin.com/in/syed-arzoo-karina-926419171/" target="_blank" rel="noopener">linkedin.com/in/syed-arzoo-karina</a>
+      </div>
+    </div>
+  </section>
+
+  <p class="foot">Syed Arzoo Karina &middot; Building Brands &amp; Communities &middot; Founder&rsquo;s Office at Fountane Inc. &middot; Hyderabad, Telangana, India</p>
+
+</div>
+
+</body>
+</html>
